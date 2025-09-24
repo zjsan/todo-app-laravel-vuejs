@@ -2,4 +2,4 @@
 
 use App\Http\Controllers\TaskController;
 
-Route::apiResource('task', TaskController::class);
+Route::apiResource('tasks', TaskController::class);
