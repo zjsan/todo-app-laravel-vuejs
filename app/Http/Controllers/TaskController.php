@@ -13,6 +13,7 @@ class TaskController extends Controller
     public function index()
     {
         //
+        return Task::all();
     }
 
     /**
@@ -20,7 +21,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+    
     }
 
     /**
@@ -29,6 +30,8 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         //
+        $task = Task::create($request->all());
+        return response()->json($$task, 201);
     }
 
     /**
@@ -37,6 +40,7 @@ class TaskController extends Controller
     public function show(Task $task)
     {
         //
+        return $task;
     }
 
     /**
@@ -53,6 +57,8 @@ class TaskController extends Controller
     public function update(Request $request, Task $task)
     {
         //
+        $task->update($request->all());
+        return response()->json($post, 200);
     }
 
     /**
@@ -61,5 +67,7 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         //
+        $task->delete();
+        return response()->json(null, 204);
     }
 }
