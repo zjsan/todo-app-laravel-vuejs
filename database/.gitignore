@@ -1,0 +1,21 @@
+*.sqlite*
+# Laravel
+/vendor
+/node_modules
+/public/build
+.env
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# Docker
+mysql_data/
+.dockerignore
+
+# IDE/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
